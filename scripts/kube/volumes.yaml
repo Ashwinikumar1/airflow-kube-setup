@@ -23,7 +23,7 @@ metadata:
   name: airflow-dags
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   storageClassName: standard
   persistentVolumeReclaimPolicy: Recycle
   capacity:
@@ -37,7 +37,7 @@ metadata:
   name: airflow-dags
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 512Mi
@@ -48,7 +48,7 @@ metadata:
   name: airflow-logs
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   storageClassName: standard
   persistentVolumeReclaimPolicy: Recycle
   capacity:
@@ -62,7 +62,7 @@ metadata:
   name: airflow-logs
 spec:
   accessModes:
-    - ReadOnlyMany
+    - ReadWriteOnce
   resources:
     requests:
       storage: 512Mi
