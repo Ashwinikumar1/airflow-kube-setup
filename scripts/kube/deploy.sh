@@ -19,8 +19,8 @@
 
 set -x
 
-AIRFLOW_IMAGE= gcr.io/deeplearning-181416/airflow-cdh:0.0.1
-AIRFLOW_TAG=0.0.1
+AIRFLOW_IMAGE= gcr.io/deeplearning-181416/airflow-cdh
+AIRFLOW_TAG= 0.0.1
 DIRNAME=$(cd "$(dirname "$0")"; pwd)
 TEMPLATE_DIRNAME=${DIRNAME}/templates
 BUILD_DIRNAME=${DIRNAME}/build
