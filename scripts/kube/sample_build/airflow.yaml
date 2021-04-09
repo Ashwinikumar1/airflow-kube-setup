@@ -76,7 +76,7 @@ spec:
       initContainers:
       - name: "init"
         image: pequetrefe/airflow:0.0.1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: airflow-configmap
           mountPath: /root/airflow/airflow.cfg
@@ -97,7 +97,7 @@ spec:
       containers:
       - name: webserver
         image: pequetrefe/airflow:0.0.1
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - name: webserver
           containerPort: 8080
