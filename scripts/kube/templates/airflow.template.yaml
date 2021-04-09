@@ -71,7 +71,7 @@ spec:
       initContainers:
       - name: "init"
         image: {{AIRFLOW_IMAGE}}:{{AIRFLOW_TAG}}
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         volumeMounts:
         - name: airflow-configmap
           mountPath: /root/airflow/airflow.cfg
@@ -93,7 +93,7 @@ spec:
       containers:
       - name: webserver
         image: {{AIRFLOW_IMAGE}}:{{AIRFLOW_TAG}}
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         ports:
         - name: webserver
           containerPort: 8080
@@ -118,7 +118,7 @@ spec:
           mountPath: /root/airflow/logs
       - name: scheduler
         image: {{AIRFLOW_IMAGE}}:{{AIRFLOW_TAG}}
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         args: ["scheduler"]
         env:
         - name: AIRFLOW_KUBE_NAMESPACE
