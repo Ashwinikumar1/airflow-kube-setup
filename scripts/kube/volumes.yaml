@@ -77,7 +77,7 @@ spec:
     storage: 512Mi
   hostPath:
     path: /airflow-dags/
- ---
+---
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
