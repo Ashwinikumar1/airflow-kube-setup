@@ -71,17 +71,17 @@ spec:
   accessModes:
     - ReadWriteOnce
   capacity:
-    storage: 512MBi
+    storage: 512Mi
   hostPath:
     path: /airflow-dags/
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: test-volume
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 512Mi
+# ---
+# kind: PersistentVolumeClaim
+# apiVersion: v1
+# metadata:
+#   name: test-volume
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 512Mi
