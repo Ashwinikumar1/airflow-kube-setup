@@ -24,6 +24,7 @@ metadata:
 spec:
   accessModes:
     - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Recycle
   capacity:
     storage: 512Mi
   hostPath:
@@ -47,6 +48,7 @@ metadata:
 spec:
   accessModes:
     - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Recycle
   capacity:
     storage: 512Mi
   hostPath:
@@ -70,18 +72,19 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
   capacity:
     storage: 512Mi
   hostPath:
     path: /airflow-dags/
-# ---
-# kind: PersistentVolumeClaim
-# apiVersion: v1
-# metadata:
-#   name: test-volume
-# spec:
-#   accessModes:
-#     - ReadWriteOnce
-#   resources:
-#     requests:
-#       storage: 512Mi
+ ---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: test-volume
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 512Mi
