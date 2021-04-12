@@ -28,7 +28,8 @@ RUN apt-get update -y && apt-get install -y \
 
 RUN pip install --upgrade pip
 
-RUN pip install apache-airflow==1.10.10
+RUN pip install Flask-SQLAlchemy
+RUN pip install apache-airflow
 RUN pip install 'apache-airflow[kubernetes]'
 RUN pip install 'apache-airflow[postgres]'
 
